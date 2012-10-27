@@ -1,9 +1,9 @@
-#include <QTemporaryFile>
-#include <QDataStream>
-#include <QTime>
-#include <QFileInfo>
-#include <QProgressDialog>
-#include <QIcon>
+#include <QtCore/QTemporaryFile>
+#include <QtCore/QDataStream>
+#include <QtCore/QTime>
+#include <QtCore/QFileInfo>
+#include <QtGui/QProgressDialog>
+#include <QtGui/QIcon>
 
 #include "formathandler.h"
 
@@ -255,7 +255,7 @@ void SpriteThread::run( void )
             return;
         }
 
-        quint16 currentSprite = 1;
+        quint32 currentSprite = 1;
         quint32 offset = 0, now = 0;
 
         setMinimum( currentSprite );
