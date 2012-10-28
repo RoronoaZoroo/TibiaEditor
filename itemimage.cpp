@@ -240,7 +240,7 @@ void ItemImage::dragMoveEvent( QDragMoveEvent *event )
         bool inRect = false;
         QRect rect;
         foreach( rect, m_pieces ) {
-            if( inRect = rect.contains( event->pos() ) )
+            if ((inRect = rect.contains( event->pos())))
                 break;
         }
         if( inRect ) {

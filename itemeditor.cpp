@@ -92,11 +92,10 @@ void ItemEditor::closeEvent( QCloseEvent *event )
         case QMessageBox::Discard:
             event->accept();
             return;
-            break;
         case QMessageBox::Cancel:
             event->ignore();
             return;
-            break;
+        default: break;
         }
     }
 
@@ -306,6 +305,7 @@ void ItemEditor::onAttributeButtonClicked( QAbstractButton *button )
         m_undoStack->push( new CommandSetItemProperties( this, &m_itemData, properties ) );
     }
     break;
+    default: break;
     }
 }
 
@@ -315,6 +315,7 @@ void ItemEditor::onAppearanceButtonClicked( QAbstractButton *button )
     case QDialogButtonBox::ApplyRole:
         m_undoStack->push( new CommandSetItemAppearance( this, &m_itemData ) );
         break;
+    default: break;
     }
 }
 
