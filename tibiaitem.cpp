@@ -2,6 +2,23 @@
 #include "tibiafile.h"
 #include "itemfile.h"
 
+const char *item_type_strings[] = {
+    QT_TR_NOOP( "Item" ),
+    QT_TR_NOOP( "Outfit" ),
+    QT_TR_NOOP( "Effect" ),
+    QT_TR_NOOP( "Projectile" )
+};
+
+const char *item_parent_strings[] = {
+    QT_TR_NOOP( "Internal" ),
+    QT_TR_NOOP( "Items" ),
+    QT_TR_NOOP( "Outfits" ),
+    QT_TR_NOOP( "Effects" ),
+    QT_TR_NOOP( "Projectiles" ),
+    QT_TR_NOOP( "Library" ),
+    QT_TR_NOOP( "External" )
+};
+
 bool ItemData::addProperty( const ItemProperty& itemProperty )
 {
     if( properties.contains( itemProperty ) )

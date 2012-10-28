@@ -33,22 +33,8 @@
 typedef QList<quint8> HeaderList;
 typedef QMap<quint32,quint32> LocalMap;
 
-static const char *item_type_strings[] = {
-    QT_TR_NOOP( "Item" ),
-    QT_TR_NOOP( "Outfit" ),
-    QT_TR_NOOP( "Effect" ),
-    QT_TR_NOOP( "Projectile" )
-};
-
-static const char *item_parent_strings[] = {
-    QT_TR_NOOP( "Internal" ),
-    QT_TR_NOOP( "Items" ),
-    QT_TR_NOOP( "Outfits" ),
-    QT_TR_NOOP( "Effects" ),
-    QT_TR_NOOP( "Projectiles" ),
-    QT_TR_NOOP( "Library" ),
-    QT_TR_NOOP( "External" )
-};
+extern const char *item_type_strings[];
+extern const char *item_parent_strings[];
 
 struct ItemProperty {
     quint8 header;

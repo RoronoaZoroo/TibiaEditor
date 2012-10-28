@@ -121,6 +121,7 @@ void ItemAttributeEditor::onButtonClicked( QAbstractButton *button )
     case QDialogButtonBox::ResetRole:
         ui->itemAttributes->onResetContents();
         break;
+    default: break;
     }
 }
 void ItemAttributeEditor::setProperties( TibiaItem *item, const PropertyList& properties )

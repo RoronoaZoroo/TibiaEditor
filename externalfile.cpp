@@ -241,7 +241,7 @@ bool ExternalFile::save( const QString& name )
             }
         }
 
-        if( m_success = saveItem( dest, getItemData(), m_datFormat ) ) {
+        if ((m_success = saveItem( dest, getItemData(), m_datFormat))) {
             file.copy( name );
             idle( name, true ); // Upon saving we must re-idle our new file to continue
         }
@@ -272,7 +272,7 @@ bool ExternalFile::save( const QString& name )
         return false;
     }
 
-    if( m_success = saveItem( out, getItemData(), m_datFormat ) ) {
+    if ((m_success = saveItem( out, getItemData(), m_datFormat))) {
         if( m_mustIdle )
             m_success = idle( name, true );
     }
