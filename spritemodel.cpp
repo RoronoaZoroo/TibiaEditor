@@ -1,5 +1,5 @@
-#include <QMimeData>
-#include <QPixmapCache>
+#include <QtCore/QMimeData>
+#include <QtGui/QPixmapCache>
 #include "spritemodel.h"
 #include "tibiafile.h"
 #include "resourcehandler.h"
@@ -138,7 +138,7 @@ QVariant SpriteModel::data( const QModelIndex& index, int role ) const
             if( resource ) {
                 quint32 realId = g_resourceHandler.getDisplayIdentifier( resource );
                 if( realId == 0xFFFF ) {
-                    if( ResourceFile *resourceFile = dynamic_cast<ResourceFile *>( resource->getFile() ) )
+                    if( ResourceFile *resourceFile = qobject_cast<ResourceFile *>( resource->getFile() ) )
                         return QVariant( resourceFile->getSource() );
                 }
                 return QVariant( realId );

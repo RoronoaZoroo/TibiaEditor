@@ -1,6 +1,6 @@
-#include <QMap>
-#include <QDir>
-#include <QTemporaryFile>
+#include <QtCore/QMap>
+#include <QtCore/QDir>
+#include <QtCore/QTemporaryFile>
 #include "spritefile.h"
 #include "resourcehandler.h"
 #include "userthread.h"
@@ -136,7 +136,7 @@ bool SpriteFile::idle( const QString& name, bool read )
     return true;
 }*/
 
-TibiaSprite SpriteFile::loadSprite( quint16 spriteId )
+TibiaSprite SpriteFile::loadSprite( quint32 spriteId )
 {
     QMutexLocker locker( &mutex );
     TibiaSprite sprite;
@@ -164,7 +164,7 @@ TibiaSprite SpriteFile::loadSprite( quint16 spriteId )
     return sprite;
 }
 
-TibiaSprite SpriteFile::getSprite( quint16 id )
+TibiaSprite SpriteFile::getSprite( quint32 id )
 {
     SharedResource resource = g_resourceHandler.loadLocalResource( RESOURCE_TYPE_SPRITE, id, false );
     if( resource )

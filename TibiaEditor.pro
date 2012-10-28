@@ -1,9 +1,9 @@
 QT += xml
 TEMPLATE = app
 TARGET = 
-DEPENDPATH += . GeneratedFiles
+DEPENDPATH += .
 INCLUDEPATH += .
-QT += xml
+
 # Input
 HEADERS += chasewidget.h \
            exporthandler.h \
@@ -34,6 +34,7 @@ HEADERS += chasewidget.h \
            spritemodel.h \
            spriteview.h \
            tibiaeditor.h \
+           TibiaEditor_private.h \
            tibiafile.h \
            tibiahandler.h \
            tibiaitem.h \
@@ -88,9 +89,3 @@ SOURCES += chasewidget.cpp \
            undoframework.cpp \
            userthread.cpp
 RESOURCES += tibiaeditor.qrc
-
-DESTDIR           += bin
-MOC_DIR           += build/moc
-UI_DIR            += build/ui
-OBJECTS_DIR       += build/obj
-
