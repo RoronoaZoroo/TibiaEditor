@@ -5,3 +5,10 @@ build/
 *.spr
 *.otb
 
+!.gitignore
+!.gitattributes
+
+ui_*
+moc_*
+*.pro.user
+qrc_*

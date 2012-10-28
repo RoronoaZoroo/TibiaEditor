@@ -1,3 +1,4 @@
+QT += xml
 TEMPLATE = app
 TARGET = 
 DEPENDPATH += . GeneratedFiles
